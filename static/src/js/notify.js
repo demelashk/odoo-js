@@ -7,7 +7,7 @@ odoo.define('odoo-js.NotifyWidget', function (require) {
   var FormAlertController = FormController.include({
     saveRecord: function () {
       var res = this._super.apply(this, arguments);
-      this.do_notify('success', 'save recored');
+      this.do_notify('success', 'Record Saved');
       return res;
 
     },
