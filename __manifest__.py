@@ -9,9 +9,11 @@
     'sequence': -10,
     "depends": [
         "base",
+        "website",
 
     ],
     "data": [
         "views/assets.xml",
+        "views/website_form.xml",
     ]
 }
