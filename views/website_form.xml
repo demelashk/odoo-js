@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="website_menu_tutorial_test1" model="website.menu">
+        <field name="name">Create Book</field>
+        <field name="url">/create_book</field>
+        <field name="page_id" ref="website.homepage_page"/>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">100</field>
+    </record>
+
+    <template id="create_book_template" name="Create Books">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <div class="container">
+                        <form role="form" action="/create/book" method="post">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            <div class="form-group">
+                                <label for="book_title" class="control-label">Book Title</label>
+                                <input type="text" name="title" t-att-value="book_title" id="book_name_id"
+                                       class="form-control" placeholder="Enter Book Title" required="required"/>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="book_isbn" class="control-label">Book ISBN</label>
+                                <input type="text" name="isbn" t-att-value="book_isbn" id="book_isbn_id"
+                                       class="form-control" placeholder="Enter Book ISBN" required="required"/>
+                            </div>
+                            <div class="clearfix oe_login_buttons">
+                                <button type="submit" class="btn btn-primary pull-left">Submit</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
