@@ -10,3 +10,4 @@ class Books(http.Controller):
     @http.route('/create/book', type="http", auth='public', website=True)
     def create_book_to_model(self, **kwargs):
         request.env['lms.book'].sudo().create(kwargs)
+        return request.render('odoo_js.website_thank_you2')
