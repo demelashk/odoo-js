@@ -2,7 +2,7 @@
 <odoo>
     <template id="notify_create" name="Book Add" inherit_id="web.assets_backend">
         <xpath expr="." position="inside">
-            <script type="text/javascript" src="/odoo-js/static/src/js/notify.js"></script>
+            <script type="text/javascript" src="/odoo_js/static/src/js/notify.js"></script>
         </xpath>
     </template>
 </odoo>
