@@ -36,4 +36,31 @@
             </div>
         </t>
     </template>
+
+    <record id="website_thank_you2" model="website.page">
+        <field name="name">Thanks</field>
+        <field name="type">qweb</field>
+        <field name="url">/create_thank_you</field>
+        <field name="website_published">True</field>
+        <field name="key">odoo_js.website_thank_you2</field>
+        <field name="arch" type="xml">
+            <t name="Thanks" t-name="odoo_js.website_thank_you2">
+                <t t-call="website.layout">
+                    <div id="wrap">
+                        <div class="container">
+                            <h1>Thanks</h1>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="alert alert-success" role="status">
+                                        The Book Has Created Successfully.
+                                    </div>
+                                    <p>Feel Free to Contact</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
 </odoo>
